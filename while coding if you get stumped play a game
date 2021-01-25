@@ -1,0 +1,22 @@
+import random
+z=random.randint(1,100)
+tries=0
+x=0
+num_of_allowed_tries=6
+while x!=z and tries<num_of_allowed_tries:
+    x=int(input("Enter random three digit number number."))
+    tries+=1
+    if x==z:
+      print("you have cracked the code") 
+      break
+    elif x>z:
+        print("This number is too high.")
+    elif x<z:
+        print("This number is too low.")
+    tries_left=num_of_allowed_tries - tries
+    if tries_left ==1:
+        print("you have "+ str(tries_left) +" more try")
+    else:
+        print("you have "+ str(tries_left) +" more tries")   
+print (z)
+
